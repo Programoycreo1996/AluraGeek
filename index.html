@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek - Gestión de Productos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="imagenes/header.png" alt="Logo de AluraGeek" class="logo">
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección de productos -->
+        <section class="productos">
+            <h1>Mis Productos</h1>
+    
+            <!-- Este div será reemplazado dinámicamente con los productos -->
+            <div class="productos-lista">
+                <!-- Las tarjetas de productos serán renderizadas aquí con JavaScript -->
+            </div>
+    
+            <!-- Si no hay productos -->
+            <div class="producto-vacio">
+                <p>No se han agregado productos.</p>
+            </div>
+        </section>
+    
+        <!-- Formulario para agregar productos -->
+        <section class="formulario">
+            <h1>Agregar Producto</h1>
+            <form id="form-agregar">
+                <label for="nombre">Nombre del Producto</label>
+                <input type="text" id="nombre" placeholder="Escribe el nombre del producto" required>
+
+                <label for="precio">Precio del Producto</label>
+                <input type="number" id="precio" placeholder="Precio del producto" required>
+
+                <label for="imagen">Imagen del Producto</label>
+                <input type="text" id="imagen" placeholder="URL de la imagen" required>
+
+                <div class="form-buttons">
+                    <button type="submit">Agregar Producto</button>
+                    <button type="reset">Limpiar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer de la aplicación -->
+    <footer>
+        <div class="footer-logo">
+            <img src="imagenes/header.png" alt="Logo de AluraGeek">
+        </div>
+        <p>Desarrollado por Gabriel J. Maya</p>
+        <p>&copy; 2025 Desarrollado para Alura Latam</p>
+    </footer>
+
+    <!-- Mover el script al final -->
+    <script src="app.js"></script>
+</body>
+</html>

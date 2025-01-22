@@ -1,0 +1,210 @@
+/* Estilos generales del body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en una columna */
+    min-height: 100vh; /* Asegura que el contenido ocupe toda la altura de la ventana */
+}
+
+/* Estilos generales del header */
+header {
+    background-color: #5300c8;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilo de la imagen del logo en el header */
+.logo-container img {
+    width: 100%; /* La imagen ocupa el 100% del ancho disponible */
+    max-width: 1500px; /* Establece un ancho máximo para que no se estire demasiado */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+/* Estilos generales del main */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+/* Sección de productos */
+.productos {
+    width: 70%; /* Los productos ocuparán el 70% del ancho */
+}
+
+/* Sección del formulario */
+.formulario {
+    width: 25%; /* El formulario ocupará el 25% del ancho */
+    background-color: #fafafa; /* Fondo más claro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cambio de orden en pantallas pequeñas */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Cambia la disposición a columna en pantallas pequeñas */
+    }
+
+    .productos {
+        width: 100%; /* Los productos ocupan el 100% del ancho */
+        order: 2; /* Los productos se mueven después del formulario */
+    }
+
+    .formulario {
+        width: 100%; /* El formulario ocupa el 100% del ancho */
+        order: 1; /* El formulario se mueve antes que los productos */
+        margin-bottom: 20px; /* Espacio entre el formulario y los productos */
+    }
+}
+
+/* Contenedor de productos (con Flexbox para alineación) */
+.productos-lista {
+    display: flex; /* Alinea los productos en una fila */
+    flex-wrap: wrap; /* Permite que los productos se ajusten si no caben en una sola fila */
+    justify-content: space-around; /* Espacio uniforme entre los productos */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 20px;
+}
+
+/* Estilos de cada card (producto) */
+.card {
+    width: 250px; /* Ancho de cada tarjeta */
+    border: 1px solid #ccc; /* Borde alrededor de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Evita que las imágenes se desborden */
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de profundidad */
+    margin-bottom: 15px; /* Reducir margen en pantallas pequeñas */
+}
+
+/* Estilo de la imagen dentro del card */
+.card-image {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del card */
+    height: 200px; /* Altura fija de la imagen */
+    object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
+}
+
+/* Estilo de la información del producto */
+.card-container--info {
+    padding: 15px;
+}
+
+/* Estilo del nombre y precio */
+.card-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-price {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilo del icono de eliminar */
+.card-trash-icon {
+    cursor: pointer;
+    width: 20px; /* Tamaño del icono */
+    height: 20px;
+    margin-left: 10px;
+}
+
+/* Estilos del mensaje de "no hay productos" */
+.producto-vacio {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+}
+
+/* Estilos generales del formulario de agregar productos */
+.formulario h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input::placeholder {
+    color: #aaa; /* Placeholder más suave */
+}
+
+/* Contenedor de botones en el formulario */
+.form-buttons {
+    display: flex;
+    justify-content: space-between; /* Para separar los botones */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+/* Estilos de los botones */
+.formulario button {
+    width: 48%; /* Cada botón ocupará el 48% del ancho */
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.formulario button:hover {
+    background-color: #555;
+}
+
+/* Estilo del botón limpiar */
+.formulario button[type="reset"] {
+    background-color: #f4f4f9;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.formulario button[type="reset"]:hover {
+    background-color: #ddd;
+}
+
+/* Estilos generales del footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Hace que el footer se coloque al final */
+}
+
+/* Estilo del logo en el footer */
+.footer-logo img {
+    width: 100%;
+    max-width: 300px; /* Ajustar para pantallas pequeñas */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los párrafos en el footer */
+footer p {
+    margin: 5px 0;
+    font-size: 16px; /* Tamaño más claro para mejor legibilidad */
+}
+
+footer p:last-of-type {
+    font-size: 14px;
+    color: #bbb; /* Color más claro para el copyright */
+}

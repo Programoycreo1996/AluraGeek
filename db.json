@@ -1,0 +1,23 @@
+{
+    "productos": [
+      {
+        "id": "1",
+        "nombre": "Legado Del Desierto",
+        "precio": 30,
+        "imagen": "imagenes/Legado_Del_Desierto.webp"
+      },
+      {
+        "id": "2",
+        "nombre": "Casa de las Sombras",
+        "precio": 45,
+        "imagen": "imagenes/Casa_de_las_Sombras.webp"
+      },
+      {
+        "id": "3",
+        "nombre": "Juego De Poderosos",
+        "precio": 50,
+        "imagen": "imagenes/Juego_De_Poderosos.webp"
+      }
+    ]
+  }
+  
